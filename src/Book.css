@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body,
+html {
+  height: 100dvh;
+  width: 100dvw;
+  background: #0e1a26;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+
+.book-container {
+  width: 410px; 
+  margin: auto;
+  font-family: 'Times New Roman', Times, serif !important; 
+  position: relative; 
+}
+
+.page {
+  width: 420px;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: white;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.coverPage {
+  position: relative; 
+  background: transparent;
+}
+
+.coverWallpaper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.coverOverlay {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.genAiLogo {
+  width: 180px;
+  height: auto;
+  margin-bottom: 44px;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+}
+
+.coverHeading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: 1.3px;
+}
+
+.coverSubtitle {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 16px;
+  letter-spacing: 1.1px;
+  color: #f0d77f;
+}
+
+.coverSupportBottomLeft {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  font-size: 1rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 3;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.6); 
+}
+
+.pearsonInlineLogo {
+  width: 100px;
+  height: auto;
+  opacity: 1;
+  vertical-align: middle;
+}
+
+.acknowledgementPage {
+  background: #f5f9fb;
+  color: #333;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.acknowledgementPage h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #013481;
+  text-align: center;
+  width: 100%;
+}
+
+.acknowledgementPage p {
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  max-width: 350px;
+}
+
+.teamList {
+  list-style-type: decimal; 
+  padding-left: 1.4rem;
+  max-width: 320px;
+  width: 100%;
+  margin-bottom: 1.2rem;
+}
+
+.teamList li {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.3rem;
+}
+
+.tocPage {
+  background: #f7fafd;
+  color: #204060;
+  padding: 2rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  font-size: 1rem;
+}
+
+.tocPage h2 {
+  font-size: 2rem;
+  color: #013481;
+  margin-bottom: 1.3rem;
+  width: 100%;
+  text-align: center;
+}
+
+.tocList {
+  font-size: 1rem;
+  width: 100%;
+  margin-left: 0.5rem;
+  padding-right: 1rem;
+  max-height: 500px;
+  overflow-y: auto;
+  padding-left: 2rem;  
+  margin-left: 0;
+}
+
+.tocList > li {
+  margin-bottom: 0.85rem; 
+}
+
+.tocList b {
+  color: #014a99;
+  font-size: 1.12rem;
+}
+
+.tocList ul {
+  margin: 0.25rem 0 0.6rem 1.1rem;
+  list-style-type: disc;
+  color: #2b4362;
+  font-size: 0.95rem;
+  padding-left: 1.5rem; 
+  margin-left: 0;
+}
+
+.tocList ul li {
+  margin-bottom: 0.15rem;
+  margin-left: 0.25rem; 
+}
+
+.videoPage {
+  background: white;
+}
+
+.topBar {
+  width: 100%;
+  height: 60px;
+  background: #ffffff;
+  color: #1a1a1a;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  padding: 0 10px;
+  flex-shrink: 0;
+}
+
+.videoClickArea {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: white;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.reelVideo {
+  aspect-ratio: 9 / 16;
+  max-width: 410px;
+  max-height: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  border: none;
+  background: black;
+  display: block;
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.09);
+}
+
+.thankYouPage {
+  background: linear-gradient(135deg, #013481 0%, #e4e5e6 100%);
+  color: rgb(73, 21, 21);
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.thankYouPage h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
